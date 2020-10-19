@@ -19,7 +19,7 @@ print('<h1>File Manager</h1>');
       foreach($files as $dir_c) {       
         print("<tr><td>" . "<a href='?path=" . $_GET['path'] . "/" . $dir_c . "'>" . $dir_c . "</a><br></td>");	
         print("<td>" . (is_dir($path . $dir_c) ? "Directory" : "File") . "</td>");     
-        print("<td>" . "<a href=''>Delete</a>" . " " . "<a href='download.php?link=$dir_c'> Download </a>" . "</td></tr>");    
+        print("<td>" . "<a href='download.php?link=$dir_c'> Download </a>" . "</td></tr>");    
        
       } 
       
