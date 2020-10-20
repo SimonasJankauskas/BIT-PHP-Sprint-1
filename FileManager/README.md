@@ -11,6 +11,7 @@ Hi! This is my PHP Sprint 1 called ***File Manager.*** Read description below.
  - Creating new folder;
  - Uploading new files;
  - Downloading files;
+ - Deleting files from Upload folder;
  - Log out option;
  ## How to use File Manager
  1. Login with **username** and **password**
