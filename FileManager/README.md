@@ -32,7 +32,10 @@ Hi! This is my PHP Sprint 1 called ***File Manager.*** Read description below.
  
  ![](images/download.PNG)
  
- 5. Click **Log Out** button to log out.
+ 5. Deleting files ( open **Uploads** folder and click Delete button );
+ ![](images/delete.PNG)
+ 
+ 6. Click **Log Out** button to log out.
  
  ![](images/logout.PNG)
  ## Thank you!
