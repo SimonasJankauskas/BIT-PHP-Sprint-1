@@ -20,6 +20,6 @@ if(isset($_GET['link']))
        readfile($file);
        exit;
     }
-    $link = "<a href='download.php?link=$filename'> $filename </a><br />";
+    // $link = "<a href='download.php?link=$filename'> $filename </a><br />";
 } 
 ?>

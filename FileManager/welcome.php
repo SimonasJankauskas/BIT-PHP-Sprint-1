@@ -19,11 +19,10 @@ print('<h1>File Manager</h1>');
       foreach($files as $dir_c) {       
         print("<tr><td>" . "<a href='?path=" . $_GET['path'] . "/" . $dir_c . "'>" . $dir_c . "</a><br></td>");	
         print("<td>" . (is_dir($path . $dir_c) ? "Directory" : "File") . "</td>");     
-        print("<td>" . "<a href='download.php?link=$dir_c'> Download </a>" . "</td></tr>");    
+        print("<td>" . "<a title='Delete book' href='delete.php?del=$dir_c'>Delete</a><br>" . "<a href='download.php?link=$dir_c'> Download </a>" . "</td></tr>");    
+        
        
       } 
-      
-      
       print("</tbody>");
       echo ("</table>");
    ?>
@@ -34,6 +33,7 @@ print('<h1>File Manager</h1>');
 @mkdir($output_dir . $folder_name, 0777);        
 }
   ?>
+  
   <!-- Create folder form -->
     <form action="welcome.php" method="post" onsubmit="setTimeout(function () { window.location.reload(); }, 10)" >
     <h2>
