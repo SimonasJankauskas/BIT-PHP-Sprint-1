@@ -26,6 +26,7 @@ print('<h1>File Manager</h1>');
       print("</tbody>");
       echo ("</table>");
    ?> 
+   <!-- Creating Folder -->
    <?php
     if (isset($_POST['foldername'])) {
         if ($_POST['foldername'] != "") {
