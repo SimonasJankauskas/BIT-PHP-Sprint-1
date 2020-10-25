@@ -25,22 +25,21 @@ print('<h1>File Manager</h1>');
       } 
       print("</tbody>");
       echo ("</table>");
-   ?>
-    <?php
-  $folder_name = $_POST['createfolder'];
-  if (!file_exists($output_dir . $folder_name))
-{
-@mkdir($output_dir . $folder_name, 0777);        
-}
-  ?>
-  
-  <!-- Create folder form -->
-    <form action="welcome.php" method="post" onsubmit="setTimeout(function () { window.location.reload(); }, 10)" >
-    <h2>
-        Create New Folder
-    </h2>
-    <input name="createfolder" type="text">
-    <input id="create_btn" type="submit" value="Create Folder">    
+   ?> 
+   <?php
+    if (isset($_POST['foldername'])) {
+        if ($_POST['foldername'] != "") {
+         $dirCreate = './' . $_GET['path'] . $_POST['foldername'];
+            if (!is_dir($dirCreate))
+                mkdir($dirCreate, 0777, true);  
+                header('location:welcome.php');
+        }
+    }
+    ?>
+<h2>Create New Folder</h2>
+<form method="post" action="">
+<input type="text" name="foldername">
+<input type="submit" name="submit" value="Create Folder">
 </form><br>
   <!-- Create upload form -->
 <form method="POST" action="upload.php" enctype="multipart/form-data">
